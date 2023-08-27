@@ -15,14 +15,31 @@ html, body {
   height: 100vh;
 }
 
+/* Base styles for textarea */
 .textarea {
-  width: 1000px;
+  width: 80vw;  /* 80% of the viewport width */
   height: 400px;
   padding: 10px;
-  font-size: 16px;
+  font-size: 1vw;  /* Responsive font size */
   margin-bottom: 20px;
   border-radius: 4px;
   border: 1px solid #ccc;
+  box-sizing: border-box;  /* Include padding and border in element's total width and height */
+}
+
+/* Media Query for smaller devices */
+@media (max-width: 768px) {
+  .textarea {
+    font-size: 3vw;  /* Adjust font size */
+  }
+}
+
+/* Media Query for even smaller devices */
+@media (max-width: 480px) {
+  .textarea {
+    font-size: 4vw;  /* Adjust font size */
+    height: 200px;  /* Adjust height */
+  }
 }
 
 .button {
